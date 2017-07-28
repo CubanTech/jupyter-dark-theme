@@ -1,9 +1,11 @@
 /*
-  Dark theme for Jupyter Notebook/iPython 4
+  CubanTech theme for Jupyter Notebook/iPython 4
+  Author: Olemis Lang
   Author: Theodore Pak
-  Repo at: https://github.com/powerpak/jupyter-dark-theme
+  Repo at: https://github.com/cubantech/jupyter-cubantech-theme
 
   Inspired by and adapted from the following:
+  Dark theme for Jupyter Notebook/iPython 4 (https://github.com/powerpak/jupyter-dark-theme)
   Base16 for iPython Notebook (https://github.com/nsonnad/base16-ipython-notebook)
   Base16 Twilight Dark, David Hart (http://hart-dev.com)
   CodeMirror template adapted for IPython Notebook by Nikhil Sonnad (https://github.com/nsonnad/base16-ipython-notebook)
@@ -49,19 +51,39 @@ div.input_area {
 /* GLOBALS */
 
 @media not print { body { background-color: #eee; } }
-a { color: #CF4A4C; }
-a:hover, a:focus { color: #DE6F71; }
+a { color: #31D6F0; }
+a:hover, a:focus { color: #249DB0; }
 
 /* INTRO PAGE */
 
-body[data-notebook-path] { background-color: #222; }
-body[data-notebook-path] #header, .terminal-app #header { display: none !important; }
+body[data-notebook-path], body[data-notebook-path] #notebook {
+  background-color: #17202F;
+  background-image: url(img/cubantech.pattern.png);
+  background-repeat: repeat;
+}
+body[data-notebook-path] #header, .terminal-app #header {
+  background-color: #17202F;
+}
+
+.navbar-brand {
+  background-color: #fff;
+}
+
+#ipython_notebook {
+  padding: 0px 5px;
+}
+
+body[data-notebook-path] #ipython-main-app {
+  background-color: #17202F;
+  height: auto;
+  min-height: 80%;
+}
 
 .tabbable { color: #979797; }
 .nav-tabs { border-bottom-color: #444; }
 .nav-tabs > li > a:hover, .nav > li > a:focus {
-  background-color: #333;
-  border-color: #222 #222 #555 #222;
+  background-color: #17202F;
+  border-color: #17202F #17202F #555 #17202F;
 }
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { 
   color: #979797;
@@ -72,12 +94,12 @@ body[data-notebook-path] #header, .terminal-app #header { display: none !importa
 }
 .list_container { border-color: #444; }
 .list_container > div { border-bottom-color: #444; }
-.list_item:hover { background-color: #333; }
+.list_item:hover { background-color: #17202F; }
 .list_header { background-color: #444; }
 #notebook_list input[type="checkbox"] { opacity: 0.3; }
 #notebook_list input[type="checkbox"]:checked { opacity: 1; }
 .item_icon { color: #777; }
-.panel { border-color: #444; background-color: #222; }
+.panel { border-color: #444; background-color: #17202F; }
 .panel-default > .panel-heading { border-color: #444; }
 #site .panel-group .panel .panel-heading { background-color: #444; }
 #running .panel-group .panel .panel-body .list_container .list_item { border-bottom-color: #444; }
@@ -118,14 +140,14 @@ div#maintoolbar { display: none !important; }
 
 body.notebook_app > #header { display: block !important; }
 .notebook_app > #header, .edit_app > #header { 
-  background-color: #333;
+  background-color: #17202F;
   color: #b7b7b7;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 .edit_app #menubar .navbar { margin-bottom: 0; }
 body > #header .header-bar { background: #444; }
-#header .navbar-brand { display: none; }
+/* #header .navbar-brand { display: none; } */
 #header .filename { margin-left: 0; margin-right: 2em; }
 #header .current_kernel_logo { width: 24px; height: 24px; }
 span.save_widget span.filename:hover {
@@ -153,7 +175,7 @@ span.save_widget span.filename:hover {
   }
 
   .notebook_app #notebook-container, .edit_app #texteditor-backdrop {
-    background: #272727;
+    background: #17202F;
   }
 }
 
@@ -201,13 +223,13 @@ span.save_widget span.filename:hover {
 }
 .btn-default {
   background-color: #555;
-  border-color: #222;
+  border-color: #17202F;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
   color: #aaa;
 }
 .btn-default:focus, .btn-default:hover {
   background-color: #555;
-  border-color: #222;
+  border-color: #17202F;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
   color: #bbb;
 }
@@ -219,7 +241,7 @@ span.save_widget span.filename:hover {
 .btn-default.disabled:focus, .btn-default.disabled:hover, 
 .btn-default[disabled]:focus, .btn-default[disabled]:hover {
   background-color: #555;
-  border-color: #222;
+  border-color: #17202F;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
   color: #aaa;
 }
@@ -227,14 +249,14 @@ span.save_widget span.filename:hover {
 .open > .dropdown-toggle.btn-default:hover, .open > .dropdown-toggle.btn-default:focus {
   background-color: #474747;
   color: #999;
-  border-color: #222;
+  border-color: #17202F;
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary {
   color: #eee;
   background-color: #4481b7;
-  border-color: #222;
+  border-color: #17202F;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 .btn-primary:focus, .btn-primary:hover {
@@ -251,7 +273,7 @@ span.save_widget span.filename:hover {
 }
 
 .form-control {
-  background: #222;
+  background: #17202F;
   color: #eee;
   border-color: #777;
 }
@@ -290,7 +312,7 @@ div#notebook .text_cell_render {
 }
 
 .rendered_html h1 {
-    color: #CF4A4C;
+    color: #31D6F0;
 }
 
 div.output_html { font-family: sans-serif; }
@@ -329,7 +351,7 @@ div.output_html { font-family: sans-serif; }
     border: 1px  #979797 solid;
     color: #979797;
   }
-  .notebook_app div.text_cell_render, .notebook_app div.output_html { color: #979797; }
+  .notebook_app div.text_cell_render, .notebook_app div.output_html { color: #ccc; }
   .notebook_app table.dataframe tr { border: 1px #979797; }
 
   .notebook_app .rendered_html pre, .notebook_app .rendered_html code {
@@ -389,6 +411,6 @@ div.CodeMirror-selected {background: rgba(221, 240, 255, 0.19) !important;}
   Markdown editing
 */
 
-.cm-s-default span.cm-header {color: #CF4A4C;}
+.cm-s-default span.cm-header {color: #31D6F0;}
 .cm-s-default span.cm-variable-2 {color: #7587A6;}
 .cm-s-default span.cm-comment {color: #7F7A80;}
