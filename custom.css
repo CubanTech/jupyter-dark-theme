@@ -346,6 +346,7 @@ div.output_html { font-family: sans-serif; }
   .notebook_app div.output_subarea { font-weight: normal; color: #979797; }
   .notebook_app div.output_stderr {background-color: #A0783C;}
   .notebook_app div.output_stderr pre {color: #eee;}
+  .notebook_app div.output_png { background: #fff url('img/cubantech.wm.png') no-repeat 90% 90%; }
 
   .notebook_app .rendered_html table, .notebook_app .rendered_html th, .notebook_app .rendered_html tr, .notebook_app .rendered_html td {
     border: 1px  #979797 solid;
